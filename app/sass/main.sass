@@ -1,0 +1,250 @@
+@import './_variables'
+@import './_all-pages'
+@import './_menu'
+@import './_normolize'
+@import './_modal'
+
+
+body 
+  font-size: 16px
+  line-height: 1.2em
+  color: $gray
+  font-family: 'Montserrat', sans-serif
+
+a 
+  color: $gray
+
+.container
+  max-width: 1140px
+  margin-left: auto
+  margin-right: auto
+  padding: 0 15px
+
+.bg
+  background: $bg
+
+.title
+  font-size: 2.2em
+  line-height: 1.2em
+  text-transform: uppercase
+  text-align: center
+  margin-bottom: 2em
+.btn 
+  background: $green
+  color: $gray
+  padding: 1em 1.2em
+  cursor: pointer
+  border: none
+  border-radius: 50px
+  font-size: 1em
+  font-weight: 700
+  text-transform: uppercase
+  &:hover
+    transform: scale(1.1)
+    color: $green
+    background: $bg
+
+.slider__top
+  width: 100%
+  background: $green
+  text-align: center
+  padding: 7px 0
+  span
+    font-size: 1.275em
+    font-weight: 700
+
+.header__inner,
+.nav__inner
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 15px 0
+
+.header__logo
+  position: relative
+  h1
+    font-size: 1.5em
+    font-weight: 700
+    text-transform: uppercase
+
+.logo
+  max-width: 250px
+.heder__phone
+  display: flex
+  max-width: 300px
+  padding: 12px 10px 12px 20px
+  font-size: 14px
+  position: relative
+  text-align: center
+  &::after
+    content: ""
+    position: absolute
+    top: 50%
+    left: 8%
+    transform: translate(-50%, -50%)
+    display: block
+    width: 2em
+    height: 2em
+    background: url('../images/phone.png')
+    background-position: 0 0
+    background-size: contain
+
+    
+.header__button
+  a
+    margin-right: 1em
+.nav__inner
+  font-size: 0.8em
+  li
+    text-align: center
+    border-radius: 50px
+    padding: 7px
+    cursor: pointer
+    &:hover 
+      background: $green
+      color: #fff
+
+.slider__offer
+  &-content
+    background: rgba(255, 255, 255, .5)
+    padding: 30px 20px
+    margin-left: auto
+    max-width: 650px
+    border-radius: 8px
+  &-title
+    font-size: 2em
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 1em
+  &-price
+    font-size: 1.5em
+    margin-bottom: 0.7em
+  &-text
+    font-size: 1.5em
+    line-height: 1.6em
+    max-width: 600px
+    margin-bottom: 1.7em
+.slide-inner
+  padding: 200px 0
+  &-item
+    width: 100%
+    height: auto
+  
+
+.slide-1
+  background-image: url('../images/slide-1.jpeg')
+  background-size: cover
+  background-repeat: no-repeat
+.slide-2
+  background-image: url('../images/slide-2.jpeg')
+  background-size: cover
+  background-repeat: no-repeat
+.slide-3
+  background-image: url('../images/slide-3.jpeg')
+  background-size: cover
+  background-repeat: no-repeat
+
+.advantages
+  padding: $mainPaddingBlock
+  &__items
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__item
+    text-align: center
+    max-width: 150px
+    margin-bottom: 25px
+    margin-left: auto
+    margin-right: auto
+    img 
+      width: 120px
+      margin-bottom: 15px
+  &__item-text
+    display: block
+
+.price-list
+  padding: $mainPaddingBlock
+  &__items
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__item
+    line-height: 1.8em
+    position: relative
+    max-width: 28%
+    border: 1px $green solid
+    border-radius: 10px
+    padding: 50px 20px 20px
+    margin: 0 auto 50px auto
+    margin-left: auto
+    margin-right: auto
+    &::after
+      transition: all .5s ease
+      position: absolute
+      content: ""
+      left: 0
+      top: 0
+      width: 100%
+      height: 40px
+      border-radius: 10px 10px 25px 25px
+      background: $green
+      z-index: -1
+    &:hover::after
+      height: 103%
+    &-title
+      font-size: 1em
+      text-transform: uppercase
+      font-weight: 700
+      margin-bottom: 10px
+    &-price
+      font-weight: 700
+      margin-bottom: 5px
+    &-text
+      margin-bottom: 30px
+    &-bottom
+      position: absolute
+      left: 50%
+      bottom: 0
+      transform: translate(-50%, 50%)  
+      padding: 10px 15px 
+      border-radius: 10px
+      background: #FF8651
+      cursor: pointer
+      transition: all .5s ease
+      &:hover
+        font-size: 1.2em
+    &-bottom a 
+      color: #fff
+
+.certificates
+  padding: $mainPaddingBlock
+  &__items
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__item img
+    max-width: 150px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 20px
+    cursor: pointer
+    transition: transform .5s ease
+    &:hover
+      transform: scale(1.1)
+
+.footer
+  padding: $mainPaddingBlock
+  &__inner
+    display: flex
+    justify-content: space-between
+  &__contact a
+    display: block
+    margin-bottom: 10px
+  &__nav-bottom li
+    margin-bottom: 10px
+  &__nav-bottom a
+    text-decoration: revert
+
+
+
+@import './_media'

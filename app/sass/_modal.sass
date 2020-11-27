@@ -1,0 +1,138 @@
+@import './_variables'
+
+
+.disable-scroll 
+	position: relative
+	overflow: hidden
+	height: 100vh
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+
+
+.modal 
+	--transition-time: 0.3s
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	// bottom: 0
+	z-index: 1000
+	background-color: rgba(0, 0, 0, 0.5)
+	cursor: pointer
+	overflow-y: auto
+	overflow-x: hidden
+	text-align: center
+	opacity: 0
+	visibility: hidden
+	transition: opacity var(--transition-time), visibility var(--transition-time)
+
+.m2
+  height: 100%
+
+.modal::before 
+	content: ""
+	display: inline-block
+	vertical-align: middle
+	// height: 100%
+
+
+.modal__container 
+	position: relative
+	width: 1000px
+	margin: 50px auto
+	display: inline-block
+	vertical-align: middle
+	background-color:  $bg
+	border-radius: 10px
+	padding: 20px
+	cursor: default
+	text-align: center
+	display: none
+
+.close 
+  position: absolute
+  right: 32px
+  top: 32px
+  width: 32px
+  height: 32px
+  opacity: 0.6
+  cursor: pointer
+
+.close:hover 
+  opacity: 1
+
+.close:before, .close:after 
+  position: absolute
+  left: 15px
+  content: ' '
+  height: 33px
+  width: 2px
+  background-color: #333
+
+.close:before 
+  transform: rotate(45deg)
+
+.close:after 
+  transform: rotate(-45deg)
+
+
+
+
+@media (max-width: 1024px) 
+	.modal__container 
+		width: 90%
+	
+
+
+.modal__close 
+	position: absolute
+	right: 0
+	top: 0
+
+
+.modal.is-open 
+	opacity: 1
+	visibility: visible
+	transition: opacity var(--transition-time), visibility var(--transition-time)
+
+
+.modal__container.modal-open 
+	display: inline-block
+
+
+.fade 
+	opacity: 0
+	transition: opacity var(--transition-time)
+
+
+.fade.animate-open 
+	opacity: 1
+	transition: opacity var(--transition-time)
+
+
+.fadeInUp 
+	opacity: 0
+	transform: translateY(-100px)
+	transition: transform var(--transition-time), opacity var(--transition-time)
+
+
+.fadeInUp.animate-open 
+	opacity: 1
+	transform: translateY(0)
+	transition: transform var(--transition-time), opacity var(--transition-time)
+
+@media (max-width: 768px) 
+  .modal-content
+    top: 0
+  .modal-content img
+    width: 450px
+
+@media (max-width: 576px) 
+  .modal-content img
+    width: 280px
+  .close:before, .close:after
+    height: 25px
+    width: 2px
+
